@@ -3,11 +3,9 @@ from app import app
 
 @app.route('/')
 @app.route('/index')
-def index():
-    #return "Hello, World!"
-	return render_template('index.html')
+@app.route('/index/<name>')
+def index(name=None):
+    #How to use in local environment: 
+	#	localhost:5000/index/name
 	
-#@app.route('/hello/')
-#@app.route('/hello/<name>')
-#def hello(name=None):
-#    return render_template('hello.html', name=name)
+	return render_template('index.html', name=name)
