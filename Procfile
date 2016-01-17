@@ -1,3 +1,3 @@
-web: gunicorn app:app
+web: gunicorn appf:app
 init: python db_create.py
 upgrade: python db_upgrade.py
